@@ -5,12 +5,10 @@ let nol = 0;
 let notnumber =0;
 for (let index = 0; index < arr.length; index++) {
   const element = arr[index]
-  if (element === 0) {
-    nol++
-  } else if (isNaN(element) || element === null || element === undefined || typeof (element) === "string") {
+  if (isNaN(element) || typeof(element) !== "number") {
     notnumber++
-//     console.log(isNaN(element))
-//     console.log(typeof(element))
+  } else if (element === 0) {
+    nol++
   } else if (element % 2 === 0) {
     evenNumbered++
   } else {
